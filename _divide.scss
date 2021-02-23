@@ -1,0 +1,32 @@
+@mixin bg($colors) {
+    background: $colors;
+}
+
+.container {
+
+    @include bg(blue);
+    height: 30vh;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    h3 {
+        color: brown;
+        border: 2px orange solid;
+        margin: 0;
+    }
+
+    .inner {
+        @include bg(yellow);
+        // position: absolute;
+        // margin:auto;
+        // width: 100%;
+        border: 2px black solid;
+        padding: 1rem;
+        h3 {
+            color: green;
+            border-style: none;
+        }
+    }
+}
